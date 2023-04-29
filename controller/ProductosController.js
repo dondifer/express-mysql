@@ -18,6 +18,14 @@ const ProductosController = {
       res.send("Producto actualisado correctamente!");
     });
   },
+  assingCategoriToProduct(req, res) {
+    let sql = `INSERT INTO categorias_productos VALUES (${req.body.idCat},${req.body.idProd})`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send("Categoria asignada a producto correctamente!");
+    });
+  },
 };
 
 module.exports = ProductosController;
