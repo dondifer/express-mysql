@@ -26,6 +26,24 @@ const ProductosController = {
       res.send("Categoria asignada a producto correctamente!");
     });
   },
+  getProdAll(req, res) {
+    let sql = `SELECT * FROM productos;`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send(result);
+    });
+  },
+  getProdAndCateg(req, res) {
+    let sql = `SELECT productos.nombre as producto, categorias.nombre as categoria FROM categorias_productos 
+INNER JOIN productos ON categorias_productos.id_productos = productos.id
+INNER JOIN categorias ON categorias_productos.id_categorias = categorias.id`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send(result);
+    });
+  },
 };
 
 module.exports = ProductosController;

@@ -18,6 +18,14 @@ const CategoriasController = {
       res.send("Categoria actualisada correctamente!");
     });
   },
+  getCatAll(req, res) {
+    let sql = `SELECT * FROM categorias;`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send(result);
+    });
+  },
 };
 
 module.exports = CategoriasController;
