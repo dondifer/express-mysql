@@ -1,0 +1,322 @@
+{
+	"info": {
+		"_postman_id": "fa8b7498-38fb-4d52-9a82-0c4ede8a8788",
+		"name": "myshopdb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4594421"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/categ",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"mecatronica\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/categ",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categ"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"carroceria externa isotermica\", \"precio\":\"5000\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/prod",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/id/4",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"carroceria externa adiabatica quasiestatica\", \"precio\":\"2000\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/prod/id/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"id",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/categ/id/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nombre\":\"electricidad y cables\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/categ/id/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categ",
+						"id",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/assignCat",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idCat\":1,\r\n    \"idProd\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/prod/assignCat",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"assignCat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/categ/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categ/",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categ",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/id/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod/id/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"id",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/categ/id/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/categ/id/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"categ",
+						"id",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/desc",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod/desc",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"desc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/name/condensador%20de%20fluzo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod/name/condensador%20de%20fluzo",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"name",
+						"condensador%20de%20fluzo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/prodAndCateg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod/prodAndCateg",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"prodAndCateg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/prod/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/prod/3",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"prod",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
