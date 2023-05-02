@@ -16,9 +16,9 @@ CREATE TABLE categorias (
   PRIMARY KEY (id)  
 );  
 CREATE TABLE categorias_productos (  
-  id_categorias INT NOT NULL,  
-  id_productos INT NOT NULL,  
-  PRIMARY KEY (id_categorias, id_productos),  
-  FOREIGN KEY (id_categorias) REFERENCES categorias(id),  
-  FOREIGN KEY (id_productos) REFERENCES productos(id)  
-);  
+id_categorias INT NOT NULL,  
+id_productos INT NOT NULL,  
+PRIMARY KEY (id_categorias, id_productos),  
+FOREIGN KEY (id_categorias) REFERENCES categorias(id),  
+FOREIGN KEY (id_productos) REFERENCES productos(id) ON DELETE CASCADE);  
+
