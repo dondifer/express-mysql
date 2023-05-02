@@ -22,3 +22,8 @@ CREATE TABLE categorias_productos (
   FOREIGN KEY (id_categorias) REFERENCES categorias(id),  
   FOREIGN KEY (id_productos) REFERENCES productos(id)  
 );  
+
+ALTER TABLE categorias_productos  
+ADD CONSTRAINT id_productos  
+FOREIGN KEY (id_productos) REFERENCES productos(id)  
+ON DELETE CASCADE;  
