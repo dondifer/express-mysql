@@ -68,6 +68,14 @@ INNER JOIN categorias ON categorias_productos.id_categorias = categorias.id`;
       res.send(result);
     });
   },
+  deleteProdById(req, res) {
+    let sql = `DELETE FROM productos WHERE id = ${req.params.id};`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send("Product deleted successfully");
+    });
+  },
 };
 
 module.exports = ProductosController;
