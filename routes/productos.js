@@ -8,5 +8,7 @@ routerProd.put("/id/:id", ProductosController.update);
 routerProd.post("/assignCat", ProductosController.assingCategoriToProduct);
 routerProd.get("/", ProductosController.getProdAll);
 routerProd.get("/prodAndCateg", ProductosController.getProdAndCateg);
-
+routerProd.get("/id/:id", ProductosController.getProdById);
+routerProd.get("/desc", ProductosController.getProdDesc);
+routerProd.get("/name/:name", ProductosController.getProdByName);
 module.exports = routerProd;

@@ -44,6 +44,30 @@ INNER JOIN categorias ON categorias_productos.id_categorias = categorias.id`;
       res.send(result);
     });
   },
+  getProdById(req, res) {
+    let sql = `SELECT * FROM productos WHERE id = ${req.params.id};`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send(result);
+    });
+  },
+  getProdDesc(req, res) {
+    let sql = `SELECT * FROM productos ORDER BY id DESC;`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send(result);
+    });
+  },
+  getProdByName(req, res) {
+    let sql = `SELECT * FROM productos WHERE nombre = '${req.params.name}';`;
+    db.query(sql, (err, result) => {
+      if (err) throw err;
+      console.log(result);
+      res.send(result);
+    });
+  },
 };
 
 module.exports = ProductosController;
